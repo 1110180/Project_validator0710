@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+</head>
+<body>
+    <h2>Форма</h2>
+
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+{#        <table>#}
+{#            {{ form }} #}
+{#        </table>#}
+        {% if form %}
+            <div>{{ form.name.label_tag }}</div>
+            <div>{{ form.name }}</div>
+            <div>{{ form.name.errors}}</div>
+            <div>{{ form.comment.label_tag }}</div>
+            <div>{{ form.comment }}</div>
+            <div>{{ form.comment.errors}}</div>
+            <div>{{ form.nerobot.label_tag }}</div>
+            <div>{{ form.nerobot }}</div>
+            <div>{{ form.nerobot.errors}}</div>
+            <div>{{ form.email.label_tag }}</div>
+            <div>{{ form.email }}</div>
+            <div>{{ form.email.errors}}</div>
+        {% endif %}
+        {% if form234 %}
+            <div>{{ form234.name.label_tag }}</div>
+            <div>{{ form234.name }}</div>
+            <div>{{ form234.name.errors}}</div>
+            <div>{{ form234.code.label_tag }}</div>
+            <div>{{ form234.code }}</div>
+            <div>{{ form234.code.errors}}</div>
+            <div>{{ form234.tel.label_tag }}</div>
+            <div>{{ form234.tel }}</div>
+            <div>{{ form234.tel.errors}}</div>
+            <div>{{ form234.tarif.label_tag }}</div>
+            <div>{{ form234.tarif }}</div>
+            <br>
+        {% endif %}
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
